@@ -44,8 +44,10 @@ def main(load_model_path: Optional[str] = None,
 
     # Load data
     if dataset_src == DATASET.MNIST:
+        print("Loading dataset: MNIST")
         train_ds, valid_ds, test_ds = DatasetDownLoader.mnist(validation_ratio=0.2)    
     elif dataset_src == DATASET.FASHION_MNIST:
+        print("Loading dataset: FashionMNIST")
         train_ds, valid_ds, test_ds = DatasetDownLoader.fashion_mnist(validation_ratio=0.2)
     else:
         raise ValueError(f"{dataset_src} not implemented as dataset")
@@ -148,10 +150,6 @@ def main(load_model_path: Optional[str] = None,
         ax2.legend()
         plt.xlabel("Epoch")
         plt.savefig(os.path.join(model_checkpoint.log_path, "loss_and_acc.png"))
-
-
-
-
 
 
 if __name__ == "__main__":
