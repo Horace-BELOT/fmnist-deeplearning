@@ -1,4 +1,4 @@
-# pytorch-deeplearning-fmnist
+# FashionMNIST classification task
 Pytorch tutorial part 1
 
 To create & start the virtual environment:
